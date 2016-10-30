@@ -10,7 +10,7 @@
 		$scope.resultMessage = "";
 		$scope.classMessage = "";
 		$scope.checkFood = function() {
-		  if($scope.food == undefined || /^(\s*,\s*)+$/.test($scope.food)) {
+		  if($scope.food == undefined || /^(\s*,\s*)+$/.test($scope.food) || $scope.food.length==0) {
 		  	$scope.resultMessage = "Please enter data first";
 		  	$scope.classMessage = "msg-error";
 		    return;
