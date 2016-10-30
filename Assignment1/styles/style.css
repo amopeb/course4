@@ -1,0 +1,14 @@
+.msg-correct{
+	padding-left: 10px;
+	padding-right: 10px;
+	color: green;
+	border: 2px green solid;
+	width: 25%;
+}
+.msg-error{
+	padding-left: 10px;
+	padding-right: 10px;
+	color: red;
+	border: 2px red solid;
+	width: 25%;
+}
