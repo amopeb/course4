@@ -20,7 +20,7 @@
           if(a.length <= 3)          	  
           	$scope.resultMessage = "Enjoy!";
           else
-          	$scope.resultMessage = "Check If Too Much";
+          	$scope.resultMessage = "Too much!";
 		}
 	}
 
