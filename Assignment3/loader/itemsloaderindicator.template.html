@@ -1,0 +1,16 @@
+<div class="loader"></div>
+	<h3 ng-if="title">Found: {{title}}</h3>
+	<ol>
+		<li ng-repeat="item in found">
+			<div class="item-id">{{item.id}}</div>
+			<div class="item-short-name">{{item.short_name}}</div>
+			<div class="item-name">{{item.name}}</div>
+			<div class="item-description">{{item.description}}</div>
+			<div ng-if="item.price_small" class="item-s-price">${{item.price_small}} <span ng-if="item.small_portion_name">for {{item.small_portion_name}}</span></div>
+			<div ng-if="item.price_large" class="item-l-price">${{item.price_large}} <span ng-if="item.large_portion_name">for {{item.large_portion_name}}</span></div>
+		   </div>
+			<button class="item-remove" ng-click="onRemove({index: $index})">Don't want this one!</button>
+		</li>
+	</ol>
+	<div ng-if="error">{{error}}</div>
+
