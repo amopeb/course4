@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Menu Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Libraries -->
+    <script src="lib/angular.js"></script>    
+    <script src="lib/angular-ui-router.js"></script>
+
+    <!-- Module -->
+    <script src="js/data.module.js"></script>
+    <!-- service -->
+    <script src="js/menudata.service.js"></script>
+   
+    <!-- Module -->
+    <script src="js/menuapp.module.js"></script>
+    <!-- router -->
+    <script src="js/routes.js"></script>
+    <!-- Categories -->
+    <script src="js/categories.component.js"></script>
+    <script src="js/categories.controller.js"></script> 
+    <!-- Items -->
+    <script src="js/items.component.js"></script>
+    <script src="js/items.controller.js"></script>
+
+    <script src="js/place-for-wait.component.js"></script>
+    <script src="js/place-for-error.component.js"></script>
+
+  </head>
+<body ng-app="MenuApp">
+   <h1>Menu</h1>
+
+   <place-for-wait></place-for-wait>
+
+   <place-for-error></place-for-error>
+
+   <ui-view></ui-view>
+
+   
+
+</body>
+</html>

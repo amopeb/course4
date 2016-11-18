@@ -1,0 +1,10 @@
+<h3 ng-show="$ctrl.list.category.short_name">[{{$ctrl.list.category.short_name}}] {{$ctrl.list.category.name}}</h3>
+<ul>
+  <li ng-repeat="item in $ctrl.list.menu_items" class="items">
+  <!-- div class="item-id">{{item.id}}</div -->
+  <div class="item-short-name">[{{item.short_name}}]</div>
+  <div class="item-name">{{item.name}}</div>
+  <div class="item-description">{{item.description}}</div>
+  <div class="item-price-large">${{item.price_large}}</div>
+  </li>
+</ul>

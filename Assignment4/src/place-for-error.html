@@ -1,0 +1,16 @@
+<style>
+  .place-for-error{
+		border: 1px solid red;
+		width: fit-content; 
+		padding: 1ex;
+  }
+	.place-error-text, .place-error-url, .place-error-status{
+		font-size: 1.2em;
+		color: red;
+	}
+</style>
+<div ng-if="$ctrl.isShow" class="place-for-error">
+  <div class="place-error-text">{{$ctrl.data.text}}</div>
+  <div class="place-error-url">URL: {{$ctrl.data.url}}</div>
+  <div class="place-error-status">Status: {{$ctrl.data.status}} {{$ctrl.data.statusText}}</div>
+</div>
