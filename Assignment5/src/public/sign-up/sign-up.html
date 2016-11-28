@@ -1,0 +1,43 @@
+<style>
+form{
+	margin-left: 4ch
+}
+	form input {
+		color: black;
+	}
+	input {
+		width:32ch;
+	}
+	label {width:16ch;}
+	button {width:16ch;
+	}
+
+
+	button:enabled{
+      color: black;
+      background-color: orange;
+	}
+</style>
+
+<h2 class="text-center">Sign Up</h2>
+<form name="formSignUp" novalidation>
+<div> <label>First Name:</label><input type="text" name="firstName" required 
+ ng-model-options="{updateOn: 'blur'}" ng-model="signUpCtrl.user.firstName">
+<span ng-if="formSignUp.firstName.$error.required && formSignUp.firstName.$touched">First name is reqiured</span></div>
+<div><label>Last Name: </label><input type="text" name="lastName" required ng-model="signUpCtrl.user.last_name">
+<span ng-if="formSignUp.lastName.$error.required && formSignUp.lastName.$touched">Last name is reqiured</span></div>
+<div><label>Email: </label><input type="email" name="email" required ng-model="signUpCtrl.user.email">
+<span ng-if="formSignUp.email.$error.required && formSignUp.email.$touched">Email is required.</span>
+<span ng-if="formSignUp.email.$error.email && formSignUp.email.$touched">Email is looked unvalid.</span></div>
+<div><label>Phone: </label><input type="text" name="phone" pattern="(\d{3})-?(\d{3})-?(\d{4})" ng-model="signUpCtrl.user.phone">
+<span ng-if="formSignUp.phone.$error.pattern && formSignUp.phone.$touched">Phone is not looked like xxx-xxx-xxxx.</span></div>
+<div><label>Favorite dish: </label><input type="text" name="dish" ng-model="signUpCtrl.user.dish">
+<span ng-if="signUpCtrl.isDishNotExists">No such menu number exists</span></div>
+<div>
+<button ng-disabled="formSignUp.$invalid" ng-click="signUpCtrl.do(); ">Submit</button>
+<span ng-if="signUpCtrl.isSaved">Your information has been saved</span></div>
+</form>
+
+
+
+
